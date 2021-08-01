@@ -1,7 +1,5 @@
 # E5-Rclone-Actions-Repo（仓库版）
 
-孪生项目：[E5-Rclone-Actions-Gist（Gist版）](https://github.com/ChirmyRam/E5-Rclone-Actions-Gist)，配置繁琐。
-
 > 基本原理：在Actions中每天自动使用Rclone调用OneDrive使Office E5订阅保持活跃，玄学续期，不保证百分百成功。
 
 **由于我自己同时用了多种续订工具，所以并不确定能否只靠本项目续订！**
