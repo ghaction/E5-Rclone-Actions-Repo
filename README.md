@@ -1,4 +1,4 @@
-# E5-Rclone-Actions-Repo（仓库版）
+# E5-Rclone-Actions-Repo
 
 > 基本原理：在Actions中每天自动使用Rclone调用OneDrive使Office E5订阅保持活跃，玄学续期，不保证百分百成功。
 
@@ -16,14 +16,16 @@
 
 # 使用步骤
 ## 1 Fork仓库
-点击仓库右上角分叉fork，当然自己新建仓库也行。
-## 2 配置rclone
-rclone添加OneDrive的教程不再赘述，需注意的是配置名应为**e5**，配置时或配置完成后注意设定配置名，若实在需要改配置名，应同时更改仓库`/.github/workflows/`路径下**E5-Rclone-Gist-Actions.yml**文件中的**e5**相关参数。将名为**rclone.conf**的配置**单文件**加密压缩（即解压后只有这个文件没有目录）为**zip**格式，并将压缩包重命名为**rclone.zip**上传至仓库根目录。
-## 3 配置secret
+点击仓库右上角分叉fork，当然自己新建仓库也行
+
+## 2 配置secret
 
 点击仓库顶栏**settings**→**Secrets→New repository secret**：
 
 - Name：**PASSWD**  Value：**压缩包密码**
+
+## 3 配置rclone
+rclone添加OneDrive的教程不再赘述，需注意的是配置名应为**e5**，配置时或配置完成后注意设定配置名，若实在需要改配置名，应同时更改仓库`/.github/workflows/`路径下**E5-Rclone-Gist-Actions.yml**文件中的**e5**相关参数。将名为**rclone.conf**的配置**单文件**加密压缩（即解压后只有这个文件）为**zip**格式，并将压缩包重命名为**rclone.zip**上传至仓库根目录。**若使用的压缩软件为WinRAR，不要直接压缩为zip格式，应在压缩zip格式的面板中选择【ZIP使用传统加密法】，否则默认的AES加密方式无法被Linux unzip解压而造成Actions任务报错！”
 
 
 ## 4 启动actions
